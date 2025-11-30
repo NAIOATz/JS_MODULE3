@@ -23,6 +23,10 @@ form.addEventListener("submit", (e) => {
     deleteBtn.textContent = "Delete"
     deleteBtn.classList.add("delete-btn")
 
+    deleteBtn.addEventListener("click", () => {
+        li.remove()
+    })
+
     li.appendChild(textSpan)
     li.appendChild(editBtn)
     li.appendChild(deleteBtn)
@@ -32,7 +36,5 @@ form.addEventListener("submit", (e) => {
     taskInput.value = ""
     deadlineInput.value = ""
 
-    // deleteBtn.addEventListener("click", () => {
-    //     li.remove()
-    // })
+    
 })
